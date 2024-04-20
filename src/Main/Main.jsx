@@ -9,6 +9,7 @@ import {
     MdOutlinePlayCircleFilled,
 } from "react-icons/md";
 import "../index.css";
+import "./main.css";
 
 const Main = () => {
     const {
@@ -65,21 +66,24 @@ const Main = () => {
                     <div className="p-0 sm:p-2 max-h-[70vh] overflow-y-auto hide-scrollbar">
                         <div className="my-10 flex items-center gap-5">
                             <MdAndroid className="text-zinc-200 text-4xl"/>
-                            <p className="tex-xl text-zinc-200">{recentPrompt}</p>
+                            <p className="text-base text-zinc-200">{recentPrompt}</p>
                         </div>
 
                         <div className="flex items-start gap-5">
-                            <MdFingerprint className="text-zinc-100 text-4xl"/>
+                            <div>
+                                <MdFingerprint className="text-zinc-100 text-4xl"/>
+                            </div>
                             {loading
                             ? <div className="loader w-full flex flex-col gap-3">
-                                <br className="rounded-md border-none bg-gray-100 bg-gradient-to-r from-blue-300 via-white to-blue-300 h-5 custom-bg-size loader animate-loader"/>
-                                <br className="rounded-md border-none bg-gray-100 bg-gradient-to-r from-blue-300 via-white to-blue-300 h-5 custom-bg-size loader animate-loader"/>
-                                <br className="rounded-md border-none bg-gray-100 bg-gradient-to-r from-blue-300 via-white to-blue-300 h-5 custom-bg-size loader animate-loader"/>
+                                <hr/>
+                                <hr/>
+                                <hr/>
                             </div> : 
                             <p 
-                                className="text-base font-light leading-relaxed text-zinc-200" 
-                                dangerouslySetInnerHTML={{__html:resultData}}>
-                            </p>}
+                                dangerouslySetInnerHTML={{__html:resultData}}
+                                className="text-base font-light leading-relaxed text-zinc-300">
+                            </p>
+                            }
                         </div>
                     </div>
                 }

@@ -29,6 +29,25 @@
   display: none;
 }
 
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right,#6289ff, #bcf5ff, #6289ff);
+    background-size: 800px 50px;
+    height: 15px;
+    animation: loader 3s infinite linear;
+}
+@keyframes loader{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+
+
 @keyframes loader{
   0%{
       background-position: -800px 0px;
