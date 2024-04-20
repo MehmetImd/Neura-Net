@@ -42,7 +42,7 @@ const ContextProvider = (props) => {
             if (i === 0 || i % 2 !== 1) {
                 newResponse += responseArray[i];
             } else {
-                newResponse += "<b>" + responseArray[i] + "</b>";
+                newResponse += "<strong>" + responseArray[i] + "</strong>";
             }
         }
         let newResponse2 = newResponse.split("*").join("</br>");
